@@ -1,0 +1,17 @@
+name: CI-CD
+
+on :
+  push: 
+     branches: ["feature/jaydeep"]
+jobs: 
+ build:
+   runs-on: ubuntu-latest
+   
+   steps:
+      - name : checkout code
+        uses: actions/checkout@v4
+
+      - name : on push console:= console form action
+        run : echo "Hello this is form action"
+       
+     
