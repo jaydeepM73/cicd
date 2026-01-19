@@ -27,8 +27,9 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           port: 22
           script: |
-           cd /var/www/myapp/cicd/cicd
-           git reset --hard git
+           cd /var/www/myapp/cicd/cicd 
+           ls -al
+        
            pull origin feature/jaydeep
            npm install 
            npm run build
