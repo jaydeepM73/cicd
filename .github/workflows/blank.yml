@@ -6,6 +6,7 @@ on :
 jobs: 
  build:
    runs-on: ubuntu-latest
+   environment: Configure EC2 
    
    steps:
       - name : checkout code
