@@ -10,7 +10,7 @@ export default function Home() {
               Hello vandan jatu 
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl">
-              Build amazing experiences with modern technologydd
+              Build amazing experiences with modern technologyddd
             </p>
           </div>
 
