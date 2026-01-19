@@ -13,5 +13,31 @@ jobs:
 
       - name : on push console:= console form action
         run : echo "Hello this is form action"
-       
-     
+
+# name: Deploy to EC2 (No Docker)
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Deploy via SSH
+#         uses: appleboy/ssh-action@v1.0.3
+#         with:
+#           host: ${{ secrets.EC2_HOST }}
+#           username: ${{ secrets.EC2_USER }}
+#           key: ${{ secrets.EC2_KEY }}
+#           script: |
+#             cd ~/app || exit 1
+#             if [ ! -d ".git" ]; then
+#               git clone https://github.com/USERNAME/REPO.git .
+#             else
+#               git pull origin main
+#             fi
+#             npm install
+#             pm2 restart all || pm2 start index.js --name app
