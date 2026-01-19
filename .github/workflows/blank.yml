@@ -22,7 +22,7 @@ jobs:
         uses:  appleboy/ssh-action@v0.1.9
 
         with:
-          host: ${{vars.EC2_HOST}}
+          host: 13.60.41.170
           username: ${{ vars.EC2_USER }}
           key: ${{ vars.EC2_KEY }}
           port: 22
