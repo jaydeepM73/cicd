@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name : on push console:= console form action
-        run : echo "Hello this is form action"
+        run : echo "Hello this is form action ${{ vars.EC2_HOST }}"
         
       - name : start ec2 deployment
-        run : echo "start ec2 deployment"
+        run : echo "start ec2 deployment ${{ vars.EC2_USER }}"
         
       - name : Deploy to EC2
         uses:  appleboy/ssh-action@v0.1.9
